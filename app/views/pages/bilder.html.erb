@@ -5,18 +5,19 @@
     </h1>
   </div>
   <h2> Bilder quer, max 4 pro Zeile </h2>
-  <div class="col-4">
-    <img src="/assets/pexels-photo-6677734.png" class="img-thumbnail">
-    <img src="/assets/pexels-photo-7210061.jpeg" class="img-thumbnail">
-    <img src="/assets/pexels-photo-7210062.jpeg" class="img-thumbnail">
-    <img src="/assets/pexels-photo-7296711.jpeg" class="img-thumbnail">
-    <img src="/assets/pexels-photo-7565956.webp" class="img-thumbnail">
-    <img src="/assets/pexels-photo-10912815.jpeg" class="img-thumbnail">
-    <img src="/assets/pexels-photo-10925348.webp" class="img-thumbnail">
-    <img src="/assets/pexels-photo-10955577.jpeg" class="img-thumbnail">
-    <img src="/assets/pexels-photo-10980701.webp" class="img-thumbnail">
-    <img src="/assets/pexels-photo-11059192.jpeg" class="img-thumbnail">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+    <%= image_tag("pexels-photo-6677734.png", class: 'img-thumbnail' )%>
+    <%= image_tag("pexels-photo-7210061.jpeg", class: 'img-thumbnail' )%>
+    <%= image_tag("pexels-photo-7210062.jpeg", class: 'img-thumbnail' )%>
+    <%= image_tag("pexels-photo-7296711.jpeg", class: 'img-thumbnail' )%>
+    <%= image_tag("pexels-photo-7565956.webp", class: 'img-thumbnail' )%>
   </div>
   <h2> Bilder hoch, max 6 pro Zeile </h2>
+  <div class="row row-cols-1 row-cols-md-6 g-6">
+    <%= image_tag("pexels-photo-10912815.jpeg", class: 'img-thumbnail' )%>
+    <%= image_tag("pexels-photo-10925348.webp", class: 'img-thumbnail' )%>
+    <%= image_tag("pexels-photo-10955577.jpeg", class: 'img-thumbnail' )%>
+    <%= image_tag("pexels-photo-10980701.webp", class: 'img-thumbnail' )%>
+    <%= image_tag("pexels-photo-11059192.jpeg", class: 'img-thumbnail' )%>
+  </div>
 </main>
-<img src="/assets/pexels-photo-6677734.png">
