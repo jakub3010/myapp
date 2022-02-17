@@ -1,0 +1,12 @@
+<h1>Userlist</h1>
+<p> Hier sind die User aufgelistet </p>
+<p>Anzahl Datensätze: <%= User.count %></p>
+<ol>
+  <% User.all.each do |u| %>
+    <li>
+      <p><%=u.name%></p>
+      <p>Email: <a href="mailto:<%=u.email%>"><%=u.email%></a></p>
+      <p>Alter: <%=u.age%></p>
+    </li>
+  <%end%>
+</ol>
