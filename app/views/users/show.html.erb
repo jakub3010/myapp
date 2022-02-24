@@ -4,8 +4,8 @@
 <ol>
   <% User.all.each do |u| %>
     <li>
-      <p><%=u.name%></p>
-      <p>Email: <a href="mailto:<%=u.email%>"><%=u.email%></a></p>
+      <p class="m-0"><%=u.name%></p>
+      <p class="m-0">Email: <a href="mailto:<%=u.email%>"><%=u.email%></a></p>
       <p>Alter: <%=u.age%></p>
     </li>
   <%end%>
