@@ -1,2 +1,14 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+    <body>
+  <div class="center">
+    <div class="page">
+      <h1><%=@book.title%></h1>
+      <p>
+        Preis: <%=@book.price%><br>
+        Thema: <%= link_to @book.subject.name, edit_book_path(@book.subject_id) %><br>
+        Beschreibung: <%=@book.description%><br>
+        Erstelldatum: <%=@book.created_at%><br>
+      </p>
+    </div>
+    <%= link_to 'Bücherliste', books_path%>
+  </div>
+</body>
