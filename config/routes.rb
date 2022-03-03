@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'pages#home'
   get '/subjects', to: 'subjects#index', as: 'subjects' 
-  get 'subjects/show', to: 'subjects#show', as: 'show_subject'
+  get 'subjects/show/:id', to: 'subjects#show', as: 'show_subject'
   get '/books', to: 'books#index', as: 'books' 
   get '/books/new', to: 'books#new', as: 'new_book' 
   post '/books/create', to: 'books#create', as: 'create_book' 
