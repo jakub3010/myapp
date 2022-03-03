@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'subjects/show', to: 'subjects#show', as: 'show_subject'
   get '/books', to: 'books#index', as: 'books' 
   get '/books/new', to: 'books#new', as: 'new_book' 
+  post '/books/create', to: 'books#create', as: 'create_book' 
   get '/books/show/:id', to: 'books#show', as: 'show_book'
   get '/books/edit/:id', to: 'books#edit', as: 'edit_book'
   delete '/books/destroy/:id', to: 'books#destroy', as: 'delete_book'
