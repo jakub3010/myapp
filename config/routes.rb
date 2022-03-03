@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'pages#home'
-  get 'subjects/index'
-  get 'subjects/show'
+  get '/subjects', to: 'subjects#index', as: 'subjects' 
+  get 'subjects/show', to: 'subjects#show', as: 'show_subject'
   get '/books', to: 'books#index', as: 'books' 
   get '/books/new', to: 'books#new', as: 'new_book' 
   get '/books/edit/:id', to: 'books#edit', as: 'edit_book'

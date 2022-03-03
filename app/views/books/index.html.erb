@@ -1,3 +1,22 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
-<%= link_to 'Bücherliste', new_book_path %>
+<div class = "container">
+  <table class = "table table-hover">
+    <thead class = "threa-light">
+      <tr>
+        <th>
+          Titel
+        </th>
+        <th colspan="2">Aktion</th>
+      </tr>
+    </thead>
+    <tbody> <% @books.each do |b| %>
+        <tr>
+          <td><%= link_to b.title, show_book_path(b.id) %></td>
+          <td><%= link_to "Ändern", edit_book_path(b.id) %></td>
+          <td><%= link_to "Löschen", delete_book_path(b.id), method: :delete, data: { confirm: "Sind Sie sicher?" } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to "Neues Buch erfassen", new_book_path %><br/>
+  <%= link_to "Fachgebiete", subjects_path %><br/>
+</div>
