@@ -1,14 +1,7 @@
 Rails.application.routes.draw do
   root 'pages#home'
-  get '/subjects', to: 'subjects#index', as: 'subjects' 
-  get 'subjects/show/:id', to: 'subjects#show', as: 'show_subject'
-  get '/books', to: 'books#index', as: 'books' 
-  get '/books/new', to: 'books#new', as: 'new_book' 
-  post '/books/create', to: 'books#create', as: 'create_book' 
-  get '/books/show/:id', to: 'books#show', as: 'show_book'
-  get '/books/edit/:id', to: 'books#edit', as: 'edit_book'
-  delete '/books/destroy/:id', to: 'books#destroy', as: 'delete_book'
-  patch '/books/update/:id', to: 'books#update', as: 'update_book'
+  resources :subjects 
+  resources :books
   get 'users/show'
   get '/pages/texte'
   get '/pages/bilder'

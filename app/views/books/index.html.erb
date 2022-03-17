@@ -10,9 +10,9 @@
     </thead>
     <tbody> <% @books.each do |b| %>
         <tr>
-          <td><%= link_to b.title, show_book_path(b.id) %></td>
+          <td><%= link_to b.title, book_path(b.id) %></td>
           <td><%= link_to "Ändern", edit_book_path(b.id) %></td>
-          <td><%= link_to "Löschen", delete_book_path(b.id), method: :delete, data: { confirm: "Sind Sie sicher?" } %></td>
+          <td><%= link_to "Löschen", book_path(b.id), method: :delete, data: { confirm: "Sind Sie sicher?" } %></td>
         </tr>
       <% end %>
     </tbody>

@@ -1,5 +1,5 @@
 <div class= "marginform">
-  <%= form_with model: @book, url: update_book_path do |f| %>
+  <%= form_for :book, url: {action: "update"} do |f| %>
     <div class="form-row">
       <div class="form-group col-md-4">
         <label>Titel</label> <br/>
