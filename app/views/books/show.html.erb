@@ -4,7 +4,7 @@
       <h1><%=@book.title%></h1>
       <p>
         Preis: <%=@book.price%><br>
-        Thema: <%= link_to @book.subject.name, show_subject_path(@book.subject_id) %><br>
+        Thema: <%= link_to @book.subject.name, subject_path(@book.subject_id) %><br>
         Beschreibung: <%=@book.description%><br>
         Erstelldatum: <%=@book.created_at%><br>
       </p>
